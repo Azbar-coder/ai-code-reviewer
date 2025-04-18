@@ -1,0 +1,128 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 0.3rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left{
+  background-color: black;
+  position: relative;
+  
+}
+
+.left .code , 
+code pre ,
+.code pre code .language{
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #244855;
+  color: rgb(174, 151, 255);
+}
+main .left .review{
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #E64833;
+  color: #fcfcfc;
+  padding: 0.7rem 2rem;
+  border-radius: 0.7rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  
+}
+
+.copyBtn{
+  position: absolute;
+  top: 1rem;
+  left: 38rem;
+  cursor: pointer;
+  color:#E64833;
+}
+main .right{
+  background-color:#0B0C10;
+  padding: 1rem 2rem;
+  color: rgb(255, 253, 253);
+  font-size: 0.9rem;
+  overflow: auto;
+}
+
+/* project Name */
+.title{
+  font-size: 4.5rem;
+  position: absolute;
+  text-transform:uppercase;
+  z-index: 100;
+  top: 15rem;
+  left: 30.5rem;
+  font-weight: 600;
+  opacity: 0.3;
+  color:#E64833;
+
+}
+
+/* Spinners */
+.loader {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  margin-top: 15rem;
+  margin-left: 17rem;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #FF3D00;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
