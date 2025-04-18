@@ -1,12 +1,24 @@
-# dependencies
+# Dependency folders
 node_modules/
 client/node_modules/
 server/node_modules/
 
-# env files
+# Build outputs
+client/build/
+dist/
+*.log
+
+# Environment files (important!)
 .env
 .env.local
+.env.development
+.env.production
 
-# build files
-client/build
-dist
+# System files
+.DS_Store
+Thumbs.db
+
+# Optional IDE/workspace files
+.vscode/
+.idea/
+*.swp
