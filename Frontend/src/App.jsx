@@ -29,6 +29,7 @@ function App() {
 
   async function reviewCode() {
     setIsLoading(true);
+    const apiUrl = process.env.REACT_APP_API_URL;
     try {
       const response = await axios.post('http://localhost:3000/ai/get-review', { code });
       setReview(response.data);
